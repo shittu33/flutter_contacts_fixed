@@ -34,6 +34,23 @@ android {
         namespace 'co.quis.flutter_contacts'
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    kotlin {
+        jvmToolchain(11)
+    }
+
+    java {
+        toolchain.languageVersion.set(JavaLanguageVersion.of(11))
+    }
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
